@@ -7,35 +7,25 @@ const Landing = () => {
   return (
     <div id="landing-wrapper">
       <div id="landing-links">
-        <Link
-          to="/signup"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            marginTop: "15px",
-            fontSize: "30px",
-          }}
-        >
-          sign up
-        </Link>
-        <Link
-          to="/login"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            marginTop: "15px",
-            fontSize: "30px",
-          }}
-        >
-          login
-        </Link>
+        
+          <Link to="/signup"><div className="call-to-action"><h3>Sign Up</h3></div></Link>
+          <Link to="/login"><div className="call-to-action"><h3>Log In</h3></div></Link>
+        
       </div>
-      <Link to="/about">
-        <img
-          src="https://res.cloudinary.com/tylerdavisfilms/image/upload/v1595528689/SEIR%20Project%203/WireFrames/FinalForteLogo_copy_pndpwn.png"
-          alt="Forte. Music lessions for everyone. From anywhere."
-        />
-      </Link>
+      <div className="secondary-circle"></div>
+      {/* <Link to="/about">
+        <div className="title-circle">
+          <div className="music-note">
+            <h1>FORTE</h1>
+          </div>
+        </div>
+      </Link> */}
+      <div className="bottom-wrapper">
+        <div className="bottom-title">MUSIC LESSONS FOR EVERYONE</div>
+        <div className="right-top"></div>
+        <div className="bottom-subtitle">FROM ANYWHERE</div>
+        <div className="right-bottom"></div>
+      </div>
     </div>
   );
 };

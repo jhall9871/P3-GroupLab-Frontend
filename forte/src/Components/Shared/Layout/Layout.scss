@@ -1,6 +1,6 @@
 // Color Palette
 
-$masterBackground: rgb(196, 222, 234);
+$masterBackground: rgb(0, 0, 0);
 $masterTextColor: white;
 $masterTextShadow: 2px 2px 2px black;
 
@@ -9,22 +9,30 @@ $masterTextShadow: 2px 2px 2px black;
 }
 
 #layout-div {
-  height: 100;
   display: flex;
   width: 100vw;
+  height: 100vh;
   flex-direction: column;
-  font-family: helvetica, sans-serif;
+  // font-family: helvetica, sans-serif;
   justify-content: center;
   align-items: center;
+  background-image: url("../../../assets/saxophone-small.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: $masterBackground;
   color: $masterTextColor;
-  text-shadow: $masterTextShadow;
+  // text-shadow: $masterTextShadow;
   .layout-h1 {
     font-size: 50px;
   }
   @media only screen and (min-width: 768px) {
     .layout-h1 {
       font-size: 70px;
+    }
+    #layout-div {
+      background-image: url("../../../assets/saxophone.jpg");
     }
   }
 }

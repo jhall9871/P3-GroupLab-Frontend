@@ -8,223 +8,231 @@ export default function Nav({ setHideProps, hideProps }) {
 
   return (
     <div id="headerNav">
-      <nav id="deskNav">
-        <div id="burger-menu">
-          <div id="burger">
-            <h1 className="layout-h1">Forte</h1>
-            <div
-              id="burger-span"
+      <div id="burger-menu">
+        {/* <h1 className="layout-h1">Forte</h1> */}
+        <div className="title-circle">
+          <div className="music-note">
+            <h1>FORTE</h1>
+          </div>
+        </div>
+        <div
+          id="burger"
+          onClick={() => {
+            setOpen(!open);
+            setHideProps(!open);
+          }}
+        >
+          <div id="burger-span">
+            <svg viewBox="0 0 100 80" width="40" height="40">
+              <rect width="100" height="18" rx="8"></rect>
+              <rect y="30" width="100" height="18" rx="8"></rect>
+              <rect y="60" width="100" height="18" rx="8"></rect>
+            </svg>
+            {/* <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div> */}
+          </div>
+        </div>
+        <ul id={open ? "open" : "closed-burger-menu-list"}>
+          <li className="burger-menu-item">
+            <Link
+              to="/"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "40px",
+              }}
               onClick={() => {
                 setOpen(!open);
                 setHideProps(!open);
               }}
             >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <ul id={open ? "open" : "closed-burger-menu-list"}>
-            <li className="burger-menu-item">
-              <Link
-                to="/"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "40px",
-                }}
-                onClick={() => {
-                  setOpen(!open);
-                  setHideProps(!open);
-                }}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="burger-menu-item">
-              <Link
-                to="/about"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "40px",
-                }}
-                onClick={() => {
-                  setOpen(!open);
-                  setHideProps(!open);
-                }}
-              >
-                About
-              </Link>
-            </li>
-            <li className="burger-menu-item">
-              <Link
-                to="/meetTheTeam"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "40px",
-                }}
-                onClick={() => {
-                  setOpen(!open);
-                  setHideProps(!open);
-                }}
-              >
-                Meet the Team
-              </Link>
-            </li>
-            <li className="burger-menu-item">
-              <Link
-                to="/dashboard"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "40px",
-                }}
-                onClick={() => {
-                  setOpen(!open);
-                  setHideProps(!open);
-                }}
-              >
-                Dashboard
-              </Link>
-            </li>
-            <li className="burger-menu-item">
-              <Link
-                to="/signup"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "40px",
-                }}
-                onClick={() => {
-                  setOpen(!open);
-                  setHideProps(!open);
-                }}
-              >
-                Sign Up
-              </Link>
-            </li>
-            <li className="burger-menu-item">
-              <Link
-                to="/login"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "40px",
-                }}
-                onClick={() => {
-                  setOpen(!open);
-                  setHideProps(!open);
-                }}
-              >
-                Login
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div id="desk-menu">
-          <h1 className="layout-h1">Forte</h1>
-          <ul id="desk-ul">
-            <li>
-              <Link
-                to="/"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "20px",
-                }}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "20px",
-                }}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/meetTheTeam"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "20px",
-                }}
-              >
-                Meet the Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/dashboard"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "20px",
-                }}
-              >
-                Dashboard
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/signup"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "20px",
-                }}
-              >
-                Sign Up
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/login"
-                style={{
-                  fontFamily: "helvetica, sans-serif",
-                  textDecoration: "none",
-                  color: "white",
-                  marginTop: "15px",
-                  fontSize: "20px",
-                }}
-              >
-                Login
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+              Home
+            </Link>
+          </li>
+          <li className="burger-menu-item">
+            <Link
+              to="/about"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "40px",
+              }}
+              onClick={() => {
+                setOpen(!open);
+                setHideProps(!open);
+              }}
+            >
+              About
+            </Link>
+          </li>
+          <li className="burger-menu-item">
+            <Link
+              to="/meetTheTeam"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "40px",
+              }}
+              onClick={() => {
+                setOpen(!open);
+                setHideProps(!open);
+              }}
+            >
+              Meet the Team
+            </Link>
+          </li>
+          <li className="burger-menu-item">
+            <Link
+              to="/dashboard"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "40px",
+              }}
+              onClick={() => {
+                setOpen(!open);
+                setHideProps(!open);
+              }}
+            >
+              Dashboard
+            </Link>
+          </li>
+          <li className="burger-menu-item">
+            <Link
+              to="/signup"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "40px",
+              }}
+              onClick={() => {
+                setOpen(!open);
+                setHideProps(!open);
+              }}
+            >
+              Sign Up
+            </Link>
+          </li>
+          <li className="burger-menu-item">
+            <Link
+              to="/login"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "40px",
+              }}
+              onClick={() => {
+                setOpen(!open);
+                setHideProps(!open);
+              }}
+            >
+              Login
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div id="desk-menu">
+        <h1 className="layout-h1">Forte</h1>
+        <ul id="desk-ul">
+          <li>
+            <Link
+              to="/"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "20px",
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "20px",
+              }}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/meetTheTeam"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "20px",
+              }}
+            >
+              Meet the Team
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/dashboard"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "20px",
+              }}
+            >
+              Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/signup"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "20px",
+              }}
+            >
+              Sign Up
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/login"
+              style={{
+                fontFamily: "helvetica, sans-serif",
+                textDecoration: "none",
+                color: "white",
+                marginTop: "15px",
+                fontSize: "20px",
+              }}
+            >
+              Login
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

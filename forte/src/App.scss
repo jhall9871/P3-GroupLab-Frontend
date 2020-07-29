@@ -1,21 +1,24 @@
-// Color Palette
+// // Color Palette
 
-$masterBackground: rgb(196, 222, 234);
-$masterTextColor: white;
-$masterTextShadow: 2px 2px 2px black;
+// $masterBackground: rgb(196, 222, 234);
+// $masterTextColor: white;
+// $masterTextShadow: 2px 2px 2px black;
 
-// Mixins
+// // Mixins
 
-// Button Mixin
+// // Button Mixin
 
-@mixin button-mixin {
-  width: 90px;
-  height: 40px;
-  margin: 10px;
-  border: 2px solid white;
-  background-color: lightgray;
-  font-family: Helvetica, sans-serif;
-  font-size: 20px;
-  color: white;
-  text-shadow: $masterTextShadow;
+// button {
+//   width: 90px;
+//   height: 40px;
+//   margin: 10px;
+//   border: 2px solid white;
+//   background-color: lightgray;
+//   font-family: Helvetica, sans-serif;
+//   font-size: 20px;
+//   color: white;
+// }
+
+#app-wrapper {
+    overflow: hidden;
 }

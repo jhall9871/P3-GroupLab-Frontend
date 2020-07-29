@@ -3,50 +3,75 @@ $masterTextColor: white;
 $masterTextShadow: 2px 2px 2px black;
 
 #headerNav {
-  margin-top: -30px;
+  position: fixed;
+  top: 0;
+  height: 90px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
-
-#deskNav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  z-index: 1000;
 }
 
 #burger-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+}
+
+.title-circle {
+  position: absolute;
+  left: -40px;
+  top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,204,0,0.8);
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  z-index: 0;
+  h1 {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    color: black;
+    font-size: 50px;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 500;
+    letter-spacing: -3px;
+  }
+  .music-note {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 20px;
+    background-image: url("../../../assets/eighthnote2.png");
+    background-size: cover;
+  }
 }
 
 #burger {
-  display: fixed;
-  flex-direction: column;
-  justify-content: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  font-family: Helvetica, sans-serif;
-
-  h1 {
-    margin-bottom: 10px;
-  }
+  margin-right: 20px;
   #burger-span {
     display: flex;
     flex-direction: column;
-    margin-bottom: -50px;
-    width: 40px;
+    justify-content: space-around;
+    width: 50px;
+    height: 40px;
+    .bar {
+      border-top: 5px solid white;
+    }
+    svg {
+      fill: white;
+    }
   }
-  margin-top: -10px;
-  width: 100%;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: space-around;
-  border-bottom: 3px solid white;
 }
 
 #open {
@@ -59,14 +84,7 @@ $masterTextShadow: 2px 2px 2px black;
   z-index: 100000000;
 }
 
-#burger-span span {
-  height: 3px;
-  width: 30px;
-  margin-bottom: 5px;
-  display: block;
-  background-color: rgb(255, 255, 255);
-  box-shadow: $masterTextShadow;
-}
+
 
 #closed-burger-menu-list {
   display: none;

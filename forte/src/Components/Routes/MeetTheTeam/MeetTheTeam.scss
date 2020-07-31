@@ -1,59 +1,46 @@
-$masterBackground: rgb(196, 222, 234);
-$masterTextColor: white;
-$masterTextShadow: 2px 2px 2px black;
-
 .team {
+  // position: absolute;
+  // top: 0;
   display: flex;
+  margin-top: 120px;
   flex-direction: column;
   align-items: center;
   h2 {
     text-align: center;
     font-size: 40px;
     margin-bottom: 10px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+    width: 90vw;
   }
-  width: 100vw;
+  width: 90vw;
 }
 
 .team-card {
-  box-shadow: $masterTextShadow;
+  font-family: 'Josefin Sans', sans-serif;
+  z-index: 1000;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid white;
-  background-color: rgb(163, 163, 163);
+  // border: 3px solid white;
+  background:  rgba(0,0,0,0.8);
   width: 90vw;
-  border-radius: 10px;
   h2 {
     font-size: 40px;
   }
   h3 {
     font-size: 30px;
   }
-  // p {
-  //   text-shadow: none;
-  //   line-height: 1.3rem;
-  //   // font-size: 20px;
-  //   padding-top: 5px;
-  //   color: black;
-  //   border-radius: 10px;
-  //   margin: 40px 40px;
-  //   font-weight: 600;
-  // }
+
   p {
-    font-size: 20px;
-    line-height: 1.5rem;
-    font-weight: 600;
-    text-shadow: 1px 1px 1px black;
-    // text-shadow: none;
-    // color: black;
-      border-radius: 10px;
+    font-size: 1rem;
+      line-height: 1.2rem;
+      font-weight: 500;
       margin: 40px 40px;
-      font-weight: 600;
   }
   img {
     border: 3px solid white;
-    box-shadow: $masterTextShadow;
     width: 250px;
     border-radius: 10px;
   }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 
-export default function Nav({ setHideProps, hideProps }) {
+export default function Nav({ setHideProps }) {
   // State to open and close the mobile nav
   const [open, setOpen] = useState(false);
 
@@ -22,16 +22,11 @@ export default function Nav({ setHideProps, hideProps }) {
             setHideProps(!open);
           }}
         >
-          <div id="burger-span">
-            <svg viewBox="0 0 100 80" width="40" height="40">
-              <rect width="100" height="18" rx="8"></rect>
-              <rect y="30" width="100" height="18" rx="8"></rect>
-              <rect y="60" width="100" height="18" rx="8"></rect>
-            </svg>
-            {/* <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div> */}
-          </div>
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="18" rx="8"></rect>
+            <rect y="30" width="100" height="18" rx="8"></rect>
+            <rect y="60" width="100" height="18" rx="8"></rect>
+          </svg>
         </div>
         <ul id={open ? "open" : "closed-burger-menu-list"}>
           <li className="burger-menu-item">
@@ -145,7 +140,11 @@ export default function Nav({ setHideProps, hideProps }) {
         </ul>
       </div>
       <div id="desk-menu">
-        <h1 className="layout-h1">Forte</h1>
+        <div className="title-circle">
+          <div className="music-note">
+            <h1>FORTE</h1>
+          </div>
+        </div>
         <ul id="desk-ul">
           <li>
             <Link

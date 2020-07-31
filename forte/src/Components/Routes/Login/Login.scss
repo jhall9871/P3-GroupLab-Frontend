@@ -1,21 +1,6 @@
-$masterBackground: rgb(196, 222, 234);
-$masterTextColor: white;
-$masterTextShadow: 2px 2px 2px black;
-
-@mixin button-mixin {
-  width: 90px;
-  height: 40px;
-  margin: 10px;
-  border: 2px solid white;
-  background-color: rgb(163, 163, 163);
-  font-family: Helvetica, sans-serif;
-  font-size: 20px;
-  color: white;
-  border-radius: 10px;
-  text-shadow: $masterTextShadow;
-}
 
 #login-wrapper {
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,13 +24,13 @@ $masterTextShadow: 2px 2px 2px black;
     font-weight: 600;
   }
   button {
-    @include button-mixin();
+
   }
   input {
     width: 200px;
     height: 40px;
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 1rem;
     font-family: Helvetica, sans-serif;
     border: 3px solid white;
     border-radius: 10px;

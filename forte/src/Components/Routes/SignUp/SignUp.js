@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TeacherForm from "../../Shared/TeacherForm/TeacherForm";
 import StudentForm from "../../Shared/StudentForm/StudentForm";
-import apiUrl from '../../../apiConfig';
+import apiUrl from "../../../apiConfig";
 import axios from "axios";
 import "./SignUp.css";
 
@@ -110,10 +110,22 @@ export default function SignUp(props) {
   }
   if (teacherStudent === "") {
     return (
-      <div>
-        <h3>Do you want to...</h3>
-        <button onClick={() => setTeacherStudent("Teacher")}>Teach</button>
-        <button onClick={() => setTeacherStudent("Student")}>Learn</button>
+      <div className="bigger-wrapper">
+        <h3>I want to:</h3>
+        <div className="signup-wrapper">
+          <button
+            className="signup"
+            onClick={() => setTeacherStudent("Teacher")}
+          >
+            Teach
+          </button>
+          <button
+            className="signup"
+            onClick={() => setTeacherStudent("Student")}
+          >
+            Learn
+          </button>
+        </div>
       </div>
     );
   }

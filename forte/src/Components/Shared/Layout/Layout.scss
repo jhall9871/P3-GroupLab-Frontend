@@ -12,9 +12,9 @@ $masterTextShadow: 2px 2px 2px black;
   display: flex;
   width: 100vw;
   height: 100vh;
+  overflow: scroll;
   flex-direction: column;
-  // font-family: helvetica, sans-serif;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-image: url("../../../assets/saxophone-small.jpg");
   background-size: cover;
@@ -23,7 +23,6 @@ $masterTextShadow: 2px 2px 2px black;
   background-attachment: fixed;
   background-color: $masterBackground;
   color: $masterTextColor;
-  // text-shadow: $masterTextShadow;
   .layout-h1 {
     font-size: 50px;
   }

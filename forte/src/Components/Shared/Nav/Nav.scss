@@ -17,7 +17,6 @@ $masterTextShadow: 2px 2px 2px black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 1000;
 }
 
 .title-circle {
@@ -31,7 +30,6 @@ $masterTextShadow: 2px 2px 2px black;
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  z-index: 0;
   h1 {
     position: relative;
     top: 60px;
@@ -59,57 +57,54 @@ $masterTextShadow: 2px 2px 2px black;
   justify-content: space-around;
   align-items: center;
   margin-right: 20px;
-  #burger-span {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 50px;
-    height: 40px;
-    .bar {
-      border-top: 5px solid white;
-    }
-    svg {
-      fill: white;
-    }
+  .bar {
+    border-top: 5px solid white;
+  }
+  svg {
+    fill: white;
   }
 }
 
 #open {
+  position: absolute;
+  top: 50px;
+  right: -5px;
   display: flex;
   list-style: none;
   flex-direction: column;
   text-align: right;
-  height: 100vh;
   margin-right: 30px;
   z-index: 100000000;
 }
 
-
-
 #closed-burger-menu-list {
   display: none;
 }
+/* DESKTOP =========================== */
 
 #desk-menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100vw;
+  justify-content: flex-start;
+
   #desk-ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    margin-top: 0;
+    margin-top: 80px;
     display: flex;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
-    box-shadow: $masterTextShadow;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     height: 50px;
-    width: 100vw;
-    background-color: rgb(163, 163, 163);
+    width: 80vw;
+    margin-left: 207px;
+    min-width: 520px;
+    background-color: rgba(0,0,0,0.5);
+    
     li {
       letter-spacing: 0.2px;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 }

@@ -13,13 +13,6 @@ const Landing = () => {
         
       </div>
       <div className="secondary-circle"></div>
-      {/* <Link to="/about">
-        <div className="title-circle">
-          <div className="music-note">
-            <h1>FORTE</h1>
-          </div>
-        </div>
-      </Link> */}
       <div className="bottom-wrapper">
         <div className="bottom-title">MUSIC LESSONS FOR EVERYONE</div>
         <div className="right-top"></div>

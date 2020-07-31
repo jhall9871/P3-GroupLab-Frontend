@@ -8,3 +8,48 @@ form {
 form input {
   margin: 5px;
 }
+
+.bigger-wrapper {
+  z-index: 1000;
+
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.signup-wrapper {
+  z-index: 1000;
+
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.signup-wrapper h3 {
+  z-index: 1000;
+
+  position: relative;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  
+}
+
+.signup {
+  background: rgba(0,0,0,0.8);
+  color: rgba(255,204,0,1);
+  border: 1px solid #111;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
